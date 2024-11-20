@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exec> /var/log/user-data.log 2>&1
+exec > /var/log/user-data.log 2>&1
 
 # update the ubuntu machine
 sudo apt update -y
@@ -20,4 +20,4 @@ cd /home/ubuntu/project
 sudo npm install -y
 
 # turn up the server
-sudo npx start index.js
+sudo npx pm2 start index.js
